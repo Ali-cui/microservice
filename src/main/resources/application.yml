@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: eureka
+server:
+  port: 8761
+eureka:
+  client:
+    service-url:
+      defaultzone: http://127.0.0.1:8762/eureka/
+      #eureka必须实现高可用至少2个 2个eureka是互相注册 3个eureka则是两两互相注册
+      #defaultzone: http://127.0.0.1:8761/eureka/ 即1注册到2 2注册到1
+      #defaultzone: http://127.0.0.1:8761/eureka/,http://127.0.0.1:8762/eureka/
+      #即 启动1时 将1注册到2和3 启动2时 将2注册到1和3  启动3时 将3注册到1和2
+    register-with-eureka: false #本身就是一个注册中心所以不需要自己注册进eureka
+  server:
+    enable-self-preservation: false #eureka server 的自我保护 开发环境关闭 生产环境打开

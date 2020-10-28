@@ -5,17 +5,17 @@ package com.srcb.order.entity;
  * @Date: 2020/10/27 18:00
  */
 public class Order {
-    private String id;
+    private Integer id;
     private Double price;
     private String receiverName;
     private String receiverAddress;
     private String receiverPhone;
 
-    public String getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

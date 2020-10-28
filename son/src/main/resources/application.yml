@@ -1,6 +1,9 @@
 spring:
   application:
     name: son
+  datasource:
+    dbcp2:
+      password:
 server:
   port: 8000
 eureka:

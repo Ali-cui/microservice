@@ -1,8 +1,13 @@
 spring:
   application:
     name: order
+  datasource:
+    url: jdbc:mysql://49.234.95.146:3306/test?characterEncoding=utf8&useSSL=false&serverTimezone=UTC&rewriteBatchedStatements=true
+    password: Li19950619/
+    username: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
 server:
-  port: 8001
+  port: 8009
 eureka:
   instance:
     prefer-ip-address: true
@@ -17,3 +22,4 @@ eureka:
     register-with-eureka: true #�������һ��ע���������Բ���Ҫ�Լ�ע���eureka
   server:
     enable-self-preservation: false #eureka server �����ұ��� ���������ر� ����������
+
